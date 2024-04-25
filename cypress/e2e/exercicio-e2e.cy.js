@@ -4,13 +4,6 @@ import { fa, faker } from '@faker-js/faker';
 
 
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
-  /*  Como cliente 
-      Quero acessar a Loja EBAC 
-      Para fazer um pedido de 4 produtos 
-      Fazendo a escolha dos produtos
-      Adicionando ao carrinho
-      Preenchendo todas opções no checkout
-      E validando minha compra ao final */
 
 describe('Exercico modulo 12', () => {
     
@@ -51,7 +44,7 @@ beforeEach(() => {
     cy.get('.products > .row')
     cy.contains('Ariel Roll Sleeve Sweatshirt').click()
     cy.get('.button-variable-item-M').click()
-    cy.get('.button-variable-item-Red').click()
+    cy.get('.button-variable-item-Green').click()
     cy.get('.input-text').clear().type(1)
     cy.get('.single_add_to_cart_button').click()
     
