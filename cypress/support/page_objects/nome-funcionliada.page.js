@@ -10,12 +10,12 @@ class ProdutosPage{
     }
 
     buscarProdutosLista(nomeProdutos){
-        cy.get('.product-block ')
+        cy.get('.products > .row ')
         .contains(nomeProdutos)     
         .click()
     }
     visitarProdutos(nomeProdutos){
-        //cy.visit(`produtos/${nomeProdutos}`)
+        cy.visit(`produtos/${nomeProdutos}`)
         const urlformatada = nomeProdutos.replace(/ /g, '-')    
         cy.visit(`produtos/${urlformatada}`)
     }
